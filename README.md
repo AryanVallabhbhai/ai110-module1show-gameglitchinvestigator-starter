@@ -26,18 +26,25 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+   - The game provides a basic start on debugging with AI.
 - [ ] Detail which bugs you found.
+   -I found bugs where the session state would not update properly when the difficulty changes. This led to no new secret being generated and the banner showing the range and guess not updating.
+   -The hints would not show properly, the opposite hint would be given
+   -Session state would not clear properly
 - [ ] Explain what fixes you applied.
+   - addded logic that would take the range in the new difficulty and generate a new number in range. changed the hard coded values in the banner to the proper range
+   - Switched the returned hints in the if statements.
+   - add lines that would clear the guess history along with ensuring the game was in "play" when new game is clicked.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User enters a guess of 50
+2. Game returns the hint "Too High"
+3. User enters a guess of 25
+4. A new hint is given and the score updated after each guess
+5. After the correct guess is picked, the game will end.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
